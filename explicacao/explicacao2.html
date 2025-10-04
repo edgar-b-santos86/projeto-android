@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação do Desafio 10</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header>
+        <h1>EXPLICAÇÃO DO DESAFIO</h1>
+
+        <p>Aqui teremos todas as Explicações de como o desafio foi proposto e resolvido passo a passo.</p>
+    </header>
+    <main>
+        <article>
+            <h2>Organizando o Conteúdo (Capitulo 17 Aula 5)</h2>
+
+            <h3>Organizando os textos.</h3>
+
+            <p>Na explicação anterior incluímos o conteúdo, porém, não fizemos a sua organização, e pelo <abbr title="VisualStudio Code">VSCode</abbr> até parece que as coisas estavam organizadas, porém, quando abrimos o nosso site ele está bem bagunçado.</p>
+
+            <p>Para começar vamos colocar os nossos titulos e paragrafos dentro do da tag <em><code>&lt;article&gt;&lt;/article&gt;</code></em></p>
+
+            <p>Bom não conseguiremos colocar toda a página criada dentro desta página, porém, colocaremos todas as explicações e provavelmente criaremos mais uma ou duas páginas.</p>
+
+            <p>Primeiro, como o conteúdo já está todo no editor, selecione e envelope o título principal e envelope apertando <em>"Crtl + Shift + P"</em> e coloque o título em um <em><code>&lt;h1&gt;&lt;/h1&gt;</code></em>, e assim vamos fazendo com os subtítulos, e os parágrafos.</p>
+
+            <p>Lembre-se que podemos usar apenas um <em><code>&lt;h1&gt;&lt;/h1&gt;</code></em> no documento, entretanto, neste caso usamos um para o título da página, e outro para o título principal da matéria, colocamos em tags <em><code>&lt;h2&gt;&lt;/h2&gt;</code></em></p>
+
+            <h3>Colocando Imagens</h3>
+            <p>Dentro do nosso desafio temos duas imagens a serem colocadas, a primeira é a do primeiro modelo de robos do sistema Android, e para issso usaremos a tag <em><code>&lt;img src="" alt=""&gt;</code></em>.</p>
+
+            <p>Em algumas tags que buscam imagens, vídeos ou outros recursos para incluir no código, existe a sigla <abbr title="Source (fonte do arquivo)"><em>src</em></abbr> e podemos apenas apertar <em>"Crtl + espaço"</em> e o <abbr title="VisualStudio Code">VSCode</abbr> nos dará a pasta onde devemos buscar o arquivo, e o <abbr title="Alternative"><em>alt</em></abbr> e onde informamos o nome alternativo do arquivo, o que é bom para leitores de telas e para auxilio a deficientes visuais por exemplo.</p>
+
+            <p>A tag ficara da seguinte forma:</p>
+
+            <pre>
+                <code>
+                    &lt;img src="../imagens/dan-droids.png" alt="Primeiro Mascote do Android"&gt;
+                </code>
+            </pre>
+
+            <p>Os dois pontos e a barra precedentes ao nome da pasta no caminho foram necessários pois o arquivo de imagem, neste caso, estava em uma pasta diferente do arquivo html, e neste caso estamos dizendo dentro do código o seguinte:</p>
+
+            <p><em></em>Volte uma pasta <code>(../)</code>, em busque dentro da pasta imagens o arquivo dan-drois.png.<code>(imagens/dan-droids.png)</code></em></p>
+
+            <p>Se o arquivo que vocês está procurando (foto, vídeo ou audio), estiver na mesma página do arquivo html, então não é necessário colocar os <em>"../"</em></p>
+
+            <p>Colocaremos mais duas imagens no desafio, e também continuaremos a configuração dos parágrafos e dos títulos.</p>
+
+            <h3>Incorporando Vídeos</h3>
+
+            <p>Agora iremos incorporar um vídeo falar sobre como incorporar vídeos no nosso código, e inclusive já incorporamos uma vídeo dentro da pagina anterior.</p>
+
+            <p>Primeiro vamos no YouTube, e vamos escolher o mesmo vídeo que o professor Gustavo Guanabara usou no desáfio, clicamos no botão compartilhar e depois selecionamos a opção incorporar.</p>
+
+            <p>O YouTube automaticamente gera o código de vídeo para que nós apenas o colemos em nosso código html.</p>
+
+            <p>Como o vídeo já está no desafio, aqui nós apenas demonstraremos como o código ficou dentro do editor.</p>
+
+            <pre>
+            &lt;div class="video"&gt;
+                    &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/l2UDgpLz20M?si=em0ZLgXejHtRUKdk"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                    encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen&gt;&lt;/iframe&gt;
+                &lt;/div&gt;
+            </pre>
+            
+            <p>O código fornecido pelo Youtube inicia pela tag <em><code>&lt;inframe&gt;&lt;/inframe&gt;</code></em> e colocamos ela dentro de uma <em><code>&lt;div&gt;&lt;/div&gt;</code></em> com a <em><code>class="video"</code></em> para que posteriormente possamos configurar a exibição dentro do nosso site do desafio.</p>
+
+            <h3>Inclusão da lista e conteúdo extra</h3>
+            <p>Dentro da página do desafio 10 temos após o vídeo mais informações e curiosidades sobre o sitema android como por exemplo, os nomes que cada versão levava até a versão 9 do sistema.</p>
+
+            <p>Colocamos o conteúdo que queremos criar a lista dentro de uma <em><code>&lt;ul&gt;&lt;/ul&gt;</code></em> e depois cada item nós colocamos em uma <em><code>&lt;li&gt;&lt;/li&gt;</code></em></p>
+            
+            <p>Além disso como os nomes das versões estarão em inglês, queremos também que assim que passemos o mouse em cima do item da lista o nome em português também apareça e para isso também colocamos cada item em uma tag <em><code>&lt;abbr title=""&gt;&lt;/abbr&gt;</code></em>, onde dentro do espaço <em>title=""</em> colocamos o o texto que queremos que apareça e a palavra ficara com um pequeno pontilhado <abbr title="Como Aqui.">em baixo</abbr>.</p>
+
+            <p>Após a organização do conteúdo colocamos os links e referências de sites e colocamos as palavras em destaques </p>
+        </article>
+        <aside>
+            <h4>Relembrando o Conteúdo</h4>
+            
+                <p>Antes em html, era usada apenas a tag <em><code>&lt;div&gt;&lt;/div&gt;</code></em> para criar a organização das caixas do conteúdo dos site, porém, com o HTML5 e CSS3, como tudo ficou semântico, ou seja com mais sentido, a maioria não cria mais sites com utilizando apenas as div, essa parte da explicação por exemplo está dentro de uma tag <em><code>&lt;aside&gt;&lt;/aside&gt;</code></em>, e toda essa página de explicação do desafio 10 tem configurações parecidas com as utilizadas nele.</p>                                         
+        </aside>
+        <nav>
+            <a href="index.html" target="_self" rel="prev">Voltar</a>
+            <a href="explicacao3.html" target="_self" rel="next">Avançar</a>
+        </nav>
+    </main>
+    
+    <footer>
+        <p>Página desenvolvida com base na explicação do Professor <a href="https://allmylinks.com/cursoemvideo?fbclid=PAZXh0bgNhZW0CMTEAAadKLJNzXeXMQZ3cbmEcLyGMJC9fxHwrgFCOoAqdeLv4nvTnA5ornc9vhy6zOA_aem_Wo807gRaUsUoDLHrOFe_3w" target="_blank" rel="external">Gustavo Guanabara</a> no Curso de HTML 5 CSS 3 do <a href="https://www.cursoemvideo.com/login/"  target="_blank" rel="external">CursoemVideo</a></p>
+    </footer>     
+</body>
+</html>

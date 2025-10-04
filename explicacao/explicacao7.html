@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação do Desafio 10</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header>
+        <h1>EXPLICAÇÃO DO DESAFIO</h1>
+
+        <p>Aqui teremos todas as Explicações de como o desafio foi proposto e resolvido passo a passo.</p>
+    </header>   
+    <main>
+        <article>
+            <h2>Tornando um vídeo responsivo (Capitulo 17 Aula 12).</h2>
+            
+            <p>Agora a última configuração que restou fazer na página do desafio foi a do vídeo, e neste caso vimos que o vídeo diferente de todo o resto não está se adaptando ao tamanho da tela quando diminuímos ou aumentamos, porém, vam conseguir deixalo da maneira que precisamos para que fique de um tamanho acessível tanto em telas grandes como em telas pequenas.</p>
+
+            <p>Diferente de todo o resto do conteúdo, o vídeo incorporado do youtube, vimeo ou outro site de vídeo, é o único que não temos como alterar sua configuração, ele já vem pronto pra nós, porém, como informamos antes, vamos colocá-lo dentro de uma <em><code>&lt;div&gt;&lt;/div&gt;</code></em> e iremos criar para ela uma classe que ficou como <em><code>class="video"</code></em>.</p>
+
+            <p>Temos um macete para colocamos o vídeo centralizado faremos o seguinte dentro do estilo:</p>
+
+            <pre>
+                <code>
+                    div.video {
+                    background-color: var(--cor5);
+                    margin: 0px -20px 30px -20px;
+                    padding: 20px;
+                    padding-bottom: 58%;
+                    position: relative;
+                }
+
+                div.video > iframe {
+                    position: absolute;
+                    top: 5%;
+                    left: 5%;
+                    width: 90%;
+                    height: 90%;
+                }
+                </code>
+            </pre>
+            <p>Para começar queremos meio que dar uma diferenciada no bloco onde está o vídeo, e para isso inserimos um <em><code>background-color: var(--cor5);</code></em>, depois colocamos uma margem onde queremos que ela transpasse para a margen do main, ou seja vase para fora de sua área comum, e neste caso colocamos um <em><code>margin: 0px -20px 30px -20px;</code></em>, e colocamos um acolchoamento para o vídeo colocando um <em><code>padding: 20px;</code></em>.</p>
+            <p>Uma das configurações da <em><code>&lt;div class="video"&gt;&lt;/div&gt;</code></em> foi colocar uma <em><code>padding-bottom: 58%</code></em> e isso foi feito para que conseguíssemos fazer com o vídeo ficasse com a proporção 16:9 em qualquer tamanho de tela.</p>
+            
+            <p>Na nas configurações do <em><code>iframe</code></em> dentro da div colcamos a configuração de <em><code>position: absolute;</code></em>, colocando essas configurações na div e no iframe, conseguimos configurar a largura e altura do player bem como em sua posição, fazendo com que ele fique responsivo, diminuindo e aumentando de tamanho de acordo com o tamanho da tela de exibição e não criando mais a barra de rolagem horizontal.</p>
+
+            <p>Para finalizar, colocamos a configuração de <em><code>top: 5%; left: 5%; width: 90%; height: 90%;</code></em>, assim conseguimos deixar o vídeo centralizado e com uma proporção de 16:9.</p>
+
+            <p>Com isso finalizamos as configurações do vídeo e agora ele está responsivo.</p>
+
+            <aside>
+                <h3>Configurações pontuais antes de finalizar o projeto.</h3>
+                <p>Para finalizar, fonte dos <em><code>&lt;h1&gt;&lt;/h1&gt;</code></em> e <em><code>&lt;h2&gt;&lt;/h2&gt;</code></em> ficou em já por padrão ficar em negrito, e na página do desafio, visualmente não ficou muito bom e por isso, colocamos todos os tanto do cabeçalho quanto do conteúdo com a <em><code>font-weight: normal;</code></em>, assim ficou visualmente melhor.</p>
+
+                <p>Além disso mudamos a cor dos links de navegação e colocamos uma margem no parágrafo do header.</p>
+            </aside>
+
+            <p>Quer ver como ficou o resultado do desafio, "<a href="../android.html" target="_blank" rel="external">clique aqui</a>" para acessar a página do desafio 10.</p>
+        </article>
+        <nav>
+            <a href="explicacao6.html" target="_self" rel="prev">Voltar</a>
+        </nav>
+    </main>
+    <footer>
+        <p>Página desenvolvida com base na explicação do Professor <a href="https://allmylinks.com/cursoemvideo?fbclid=PAZXh0bgNhZW0CMTEAAadKLJNzXeXMQZ3cbmEcLyGMJC9fxHwrgFCOoAqdeLv4nvTnA5ornc9vhy6zOA_aem_Wo807gRaUsUoDLHrOFe_3w" target="_blank" rel="external">Gustavo Guanabara</a> no Curso de HTML 5 CSS 3 do <a href="https://www.cursoemvideo.com/login/"  target="_blank" rel="external">CursoemVideo</a></p>
+    </footer> 
+</body>
+</html>

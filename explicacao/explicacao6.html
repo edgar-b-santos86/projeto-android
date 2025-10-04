@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação do Desafio 10</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header>
+        <h1>EXPLICAÇÃO DO DESAFIO</h1>
+
+        <p>Aqui teremos todas as Explicações de como o desafio foi proposto e resolvido passo a passo.</p>
+    </header>   
+    <main>
+        <article>
+            <h2>Rodapé, Conteúdos Periféricos e Links (Capitulo 17 Aula 11)</h2>
+            <h3>Rodapé</h3>
+            <p>Primeiro vamos começar a tratar do nosso rodapé, que foi onde colocamos as informações das fontes de onde tiramos o conteúdo para criação do site e geralmente colocamos a versão ou última atualização, e também o nome do proprietário com os direitos devidamente reservados.</p>
+
+            <pre>
+                <code>
+                footer {
+                    background-color: var(--cor5);
+                    color: #ffffff;
+                    text-align: center;
+  
+                }
+
+                footer a {
+                    color: white;
+                    font-size: 0.8;
+                    padding: 1px;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    transition-duration: 0.7s;
+                    text-shadow: 0px 7px 7px rgba(0, 0, 0, 0.445);
+                }
+
+                footer a:hover {
+                    background-color: rgba(255, 255, 255, 0.767);
+                    color:var(--cor5)
+                }
+                </code>
+            </pre>
+            <p>Nossa configuração do rodapé ficou um pouco diferente da do original, porém, aqui nos colocamos todas as configurações feitas nas CSS.</p>
+
+            <h3>Conteúdos Periféricos</h3>
+            <p>Conteúdos periféricos são aqueles que não estão diretamente relacionados ao conteúdo principal da página, mas que são conteúdos que podemos achar importantes ou interessantes para o usuário como, curiosidades, links que também contenham informações que podem complementar o conteúdo, redes sociais e mais.</p>
+            
+            <p>Nosso conteúdo periférico está inserido em nosso <em><code>&lt;aside&gt;&lt;/aside&gt;</code></em> e vamos fazer algumas configurações bem interessantes para que ele fique destacado como um conteúdo extra.</p>
+
+            <p>A principio a primeira configuração do <em><code>&lt;aside&gt;&lt;/aside&gt;</code></em> foi a seguinte:</p>
+            <pre>
+                <code>
+                    aside {
+                        background-color: var(--cor1);
+                        padding: 10px;
+                        border-radius: 10px;
+                        box-shaow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+                    }
+                </code>
+            </pre>
+
+            <p>Essa configuração foi feita a principio para mostrar quer a lista criada no aside estava com os marcadores fora do quadro/caixa do aside e isso é necessário configurar também as listas dentro dele e o código ficou assim:</p>
+
+            <pre>
+                <code>
+                    aside > ul {
+                        list-style-type: '\2714\00A0\00A0';
+                        list-style-position: inside;
+                        columns: 2;
+                    }
+                </code>
+            </pre>
+
+            <p>O que fizemos no código acima foi trocar a imagem do marcados de listas com a declaração <em><code>list-style-type</code></em>, e nos valores colocamos o código numérico do marcardo (sem o <em>U+</em>)que encontramos no <a href="https://emojipedia.org/" target="_blank">Emojipedia</a>, além disso colocamos a contra barra ("\") na frente do código e também inserimos o <em><strong>NBSP</strong></em>, que é o espaço sem quebra de linha.</p>
+            <p>Colocamos também a declaração <em><code>list-style-position</code></em> com o valor <em><code>inside</code></em> isso fez com que os marcadores ficassem dentro do bloco do <em><code>&lt;aside&gt;&lt;/aside&gt;</code></em>.</p>
+
+            <p>Temos dentro do nosso aside um título e também queremos que ele tenha algo diferente dos demais, sendo assim foi feita a seguinte configuração para o h3 do aside:</p>
+
+            <pre>
+                <code>
+                    aside > h3 {
+                        background-color: var(--cor4);
+                        color: white;
+                        padding: 10px;
+                        margin: -10px -10px 0px -10px;
+                        border-radius: 10px 10px 0px 0px;
+                    }
+                </code>
+            </pre>
+
+            <p>Para que a configuração ficasse devidamente alocada precisamos que a margem do h3 ficasse para fora, pois quando criamos uma margem ela é teoricamente interna, e isso faria com que a margem do h3 deixasse sobrar a bargem do aside o que fucaria muito estranho.</p>
+            <p>Para isso usamos a declaração <em><code>margin: -10px -10px 0px -10px;</code></em>, o que fez com que a margem superior ficasse negativa, vazando para fora, e assim o h3 ficasse colado no topo do aside. Depois apenas colocamos um <em><code>border-radius: 10px 10px 0px 0px</code></em> sem arrendondar as partes inferiores esquerda e direita para que assim pudessemos ter um resultado onde paraceria que tinhamos criado um único bloco.</p>
+
+            <p>Uma outra coisa que criamos nos site é que todos os links terão uma diferenciação para os links internos, neste caso, colocamos a figura de elos de corrente utilizando o mesmo método que usamos para os marcados da lista do nosso aside.</p>
+
+            <p>A unica coisa que fizemos foi criar uma classe para links externos para que pudessemos diferencia-los dos demais links e usamos um pseudo-eletemento. Nas CSS o código ficou dessa forma:</p>
+            <pre>
+                <code>
+                    a.externo::after {
+                        content: '\00A0\1F517'
+                    }
+                </code>
+            </pre>            
+        </article>
+        <nav>
+            <a href="explicacao5.html" target="_self" rel="prev">Voltar</a>
+            <a href="explicacao7.html" target="_self" rel="next">Avançar</a>
+        </nav>
+    </main>
+    <footer>
+        <p>Página desenvolvida com base na explicação do Professor <a href="https://allmylinks.com/cursoemvideo?fbclid=PAZXh0bgNhZW0CMTEAAadKLJNzXeXMQZ3cbmEcLyGMJC9fxHwrgFCOoAqdeLv4nvTnA5ornc9vhy6zOA_aem_Wo807gRaUsUoDLHrOFe_3w" target="_blank" rel="external">Gustavo Guanabara</a> no Curso de HTML 5 CSS 3 do <a href="https://www.cursoemvideo.com/login/"  target="_blank" rel="external">CursoemVideo</a></p>
+    </footer> 
+</body>
+</html>

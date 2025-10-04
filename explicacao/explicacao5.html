@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação do Desafio 10</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header>
+        <h1>EXPLICAÇÃO DO DESAFIO</h1>
+
+        <p>Aqui teremos todas as Explicações de como o desafio foi proposto e resolvido passo a passo.</p>
+    </header>   
+    <main>
+        <article>
+            <h2>Melhorando o Formato do Conteúdo (Capitulo 17 Aula 10)</h2>
+            
+            <h3>Configurando os Parágrafos</h3>
+
+            <p>No desafio começamos pela configuração do parágrafo, pois quando fizemos a configuração globral de margin 0px e padding 0px nós eliminamos a margem natural que todos os parágrafos possuem e neste caso no desafio foi proposto que fizessemos o seguinte dentro da CSS:</p>
+            <pre>
+                <code>
+                    main p {
+                        margin: 15px 0;
+                        text-aling: justify;
+                        text-indent: 30px;
+                        font-size: 1em;
+                        line-height: 1.4em;
+                    }
+                </code>
+            </pre>
+            <p>Dessa forma alteramos nos parágrafos, a margem superior e inferior <em>(margin: 15px 0px)</em>, alinhamento do texto <em>(text-aling: justify;)</em>, identação ou espaço do início do parágrafo <em>(text-ident: 30px;)</em>,tamanho da fonte <em>(font-size: 1em;)</em>, e altura da linha para o espaçamento entre uma linha e outra <em>(line-height: 1.4em;)</em>.</p>
+
+            <p>Uma outra configuração que foi realizada na página do desafio foi nas palavras que foram envelopadas na tag &lt;strong&gt;&lt/strong&gt; que ficaram assim:</p>
+            <pre>
+                <code>
+                    main strong {
+                        color: var(--cor4);
+                        font-weight: bold;
+                    }
+                </code>
+            </pre>
+
+            <h3>Configurando os Links</h3>
+
+            <p>Agora vamos configurar os links, começando com os externos, e na CSS as declarações ficaram assim:</p>
+
+            <pre>
+                <code>
+                    main a {
+                        text-decoration: none;
+                        font-weight: bold;
+                        color: var(--cor5);
+                        background-color: var(--cor1);
+                        padding: 2px 6px;
+                    }
+
+                    main a:hover {
+                        text-decoration: underline;
+                        color: var(--cor4);
+                    }
+                </code>
+            </pre>
+
+            <h3>Configurando os títulos</h3>
+
+            <p>Agora vamos alplicar as alterações em nossos títulos colocamos as seguintes configurações na CSS:</p>
+
+            <pre>
+                <code>
+                    main h2 {
+                        font-family: var(--font-android);
+                        color: var(--cor4);
+                        font-size: 1.3em;
+                        background-image: linear-gradient(to right, var(--cor1), transparent);
+                        text-indent: 8px;
+                    }
+                </code>
+            </pre>
+
+        </article>
+        <nav>
+            <a href="explicacao4.html" target="_self" rel="prev">Voltar</a>
+            <a href="explicacao6.html" target="_self" rel="next">Avançar</a>
+        </nav>
+    </main>
+    <footer>
+        <p>Página desenvolvida com base na explicação do Professor <a href="https://allmylinks.com/cursoemvideo?fbclid=PAZXh0bgNhZW0CMTEAAadKLJNzXeXMQZ3cbmEcLyGMJC9fxHwrgFCOoAqdeLv4nvTnA5ornc9vhy6zOA_aem_Wo807gRaUsUoDLHrOFe_3w" target="_blank" rel="external">Gustavo Guanabara</a> no Curso de HTML 5 CSS 3 do <a href="https://www.cursoemvideo.com/login/"  target="_blank" rel="external">CursoemVideo</a></p>
+    </footer> 
+</body>
+</html>

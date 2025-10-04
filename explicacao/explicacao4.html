@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação do Desafio 10</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header>
+        <h1>EXPLICAÇÃO DO DESAFIO</h1>
+
+        <p>Aqui teremos todas as Explicações de como o desafio foi proposto e resolvido passo a passo.</p>
+    </header>   
+    <main>
+        <article>
+            <h2>Responsividade (Capitulo 17 Aulas 8 e 9)</h2>
+            
+            <p>Responsividade é a capacidade de um site se adaptar a diferentes tamanhos de tela, como smartphones, tablets e desktops. Isso é essencial para garantir uma boa experiência do usuário em qualquer dispositivo.</p>
+            <p>Neste momento utilizaremos metodos simples de responsividades para que nossa página possa ser visualizada em telas de qualquer tamanho, isso tanto para as imagens quanto para o vídeo e o texto.</p>
+            <p>O recurso que usamos no desafio foi a largura máxima e a largura minima da página, e configuramos isso dentro do CSS.</p>
+            <p>Para isso usamos a propriedade <em><code>max-width</code></em> e <em><code>min-width</code></em>, e configuramos a largura máxima da página em 800px e a largura mínima no nosso caso em 320px, assim a página se adapta a qualquer tamanho de tela.</p>
+            <p>Com isso resolvemos a responsividade de nossa página, porém, ainda temos que resolver o problema com as imagens e com os vídeos.</p>
+            <p>Para as imagens usamos a propriedade <em><code>max-width</code></em> e configuramos a largura máxima da imagem em 100%, assim a imagem se adapta ao tamanho da tela, e não ultrapassa o tamanho máximo da página.</p>
+            <p>Mas neste caso o professor Guanabara, nos ensinou algo que tembém pode ser utilizado para que além de uma adptação de responsividade, podemos usar mais de uma imagem para que a adaptação fique ainda mais confortavel.</p>
+            <p>Como usaremos mais de uma imagem nós selecionaremos a tag <em><code>&lt;img src="" alt=""&gt;</code></em> a enveloparemos em uma tag <em><code>&lt;picture&gt;&lt;/picture&gt;</code></em>, e aqui colocaremos a imagem menor que vai ser carregada a partir de uma certa largura da tela para isso isaremos a tag <em><code>&lt;source media="(min-width: )" srcset=""&gt;</code></em>, porém, vamos alterar de min-width para max-width e o conteúdo será carregado com a tag dessa maneira</p>
+            <pre>
+                <code>
+                    &lt;picture&gt;
+                        &lt;source media="(max-width: 280px)" srcset="../imagens/dan-droids.png"&gt;
+                        &lt;img src="../imagens/dan-droids.png" alt="Primeiro Mascote do Android"&gt;
+                    &lt;/picture&gt;
+                </code>
+            </pre>
+            
+            <p>Dentro da nossa CSS colocamos a seguinte declaração para o nosso main:</p>
+            <pre>
+                <code>
+                    main {
+                        background-color: white;
+                        text-align: justify;
+                        min-width: 280px;
+                        max-width: 800px;
+                        margin: auto;
+                        border-radius: 10px;
+                        padding: 20px;
+                    }
+                </code>
+            </pre>
+            <p>Como temos no desafio uma imagem no site que tem um tamanho limitado, também precisamos delimitar o tamanho de sua exibição para que ela não fique desfocada ou perca a qualidade de sua resolução.</p>
+            <p>Para isso demos a classe <em>pequena</em> para essa imagem e na CSS da página do desafio colocamos a seguinte configuração:</p>
+            <pre>
+                <code>
+                    main img.pequena {
+                        max-width: 350px <em>(um pouco menos que a resolução original da imagem)</em>;
+                        display: block;
+                        margin: auto;
+                    }
+                </code>
+        </article>
+        <nav>
+            <a href="explicacao3.html" target="_self" rel="prev">Voltar</a>
+            <a href="explicacao5.html" target="_self" rel="next">Avançar</a>
+        </nav>
+    </main>
+    
+    <footer>
+        <p>Página desenvolvida com base na explicação do Professor <a href="https://allmylinks.com/cursoemvideo?fbclid=PAZXh0bgNhZW0CMTEAAadKLJNzXeXMQZ3cbmEcLyGMJC9fxHwrgFCOoAqdeLv4nvTnA5ornc9vhy6zOA_aem_Wo807gRaUsUoDLHrOFe_3w" target="_blank" rel="external">Gustavo Guanabara</a> no Curso de HTML 5 CSS 3 do <a href="https://www.cursoemvideo.com/login/"  target="_blank" rel="external">CursoemVideo</a></p>
+    </footer> 
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação do Desafio 10</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header>
+        <h1>EXPLICAÇÃO DO DESAFIO</h1>
+
+        <p>Aqui teremos todas as Explicações de como o desafio foi proposto e resolvido passo a passo.</p>
+    </header>   
+    <main>
+        <article>
+            <h2>Usando Variaveis em CSS (Capitulo 17 Aula 8)</h2>
+            
+            <p>Aqui vamos falar um pouco sobre variaves, sim, variaveis em CSS.</p>
+            
+            <p>Dentro do arquivo CSS geralmente os desenvolvedores colocam as cores de sua paleta por exemplo em um comentário dentro do código e quando vão utilizá-las copiam e colam para a aplicação isso para a cor da fonte, fundo da página, enfim, fazem dessa forma, entretanto, fazendo isso com as variáveis nós podemos facilizar o uso e até mesmo a troca de cores quando quisermos mudar a cor do nosso site ou se tivermos construído ao para o nosso cliente e ele desejar fazer alterações.</p>
+            <p>Abrindo nosso arquivo CSS faremos o seguinte nós colocaremos a pseudoclasse <em><code>:root</code></em>, ela é a raiz do código e todas as variáreis que colocarmos nela poderemos usar em qualquer marcação do código.</p>
+            <p>Toda variavel em CSS começa com o sinal de dois traços "--" e a declaração dela fica assim:</p>
+            <pre>
+                <code>
+                    :root {
+                        --cor1: #f0f0f0;
+                        --cor2: #dcdcdc;
+                        --cor3: #c0c0c0;
+                        --cor4: #a9a9a9;
+                        --cor5: #04304d;
+                    }
+                </code>
+            </pre>
+            <p>Acima declaramos as variaveis da nossa paleta de cores, e dessa forma poderemos usar para configurar as cores de qualquer texto ou área do nosso site na nossa CSS.</p>
+            <p>Para usar as variaveis declaradas acima, basta colocarmos o nome da variavel dentro da propriedade que queremos configurar, por exemplo:</p>
+            <pre>
+                <code>
+                    body {
+                        background-color: var(--cor0);
+                        color: var(--cor5);
+                    }
+                </code>
+            </pre>
+            <p>Acima configuramos a cor de fundo do body e a cor do texto, e para isso usamos a propriedade <em><code>background-color</code></em> e <em><code>color</code></em>, e dentro delas colocamos o nome da variavel que declaramos anteriormente.</p>
+            
+            <p>Para usar as variaveis em qualquer lugar do código, basta usar o nome da variavel dentro da propriedade que queremos configurar, e assim podemos usar as variaveis para cores, fontes, tamanhos, etc.</p>
+            <p>Para usar uma fonte, por exemplo, podemos declarar a variavel da seguinte forma:</p>
+            <pre>
+                <code>
+                    :root {
+                        --font-padrao: Arial, Verdana, Helvetica;
+                        --font-destaque: Merienda, cursive;
+                    }
+                </code>
+            </pre>
+            
+            <p>Depois para usar a fonte padrão do site, basta colocar dentro da propriedade <em><code>font-family</code></em>:</p>
+            <pre>
+                <code>
+                    body {
+                        font-family: var(--font-padrao);
+                    }
+                </code>
+            </pre>
+            <p>Lembrando que o nome da variavel não pode ter espaços.</p>
+            <p>Com isso podemos usar as variaveis para facilitar a manutenção do código e também para facilitar a troca de cores e fontes quando necessário.</p>
+            
+            <h2>Criando Regras</h2>
+            <p>Agora que já sabemos como usar as variaveis, vamos criar algumas regras para o nosso site.</p>
+            <p>Podemos criar regras para que conseguiremos incluir mais configurações dentro das propriedades do nosso site, uma das que usamos na página do desafio foi a <em><code>@font-face</code></em>, e uma outra que sempre utilizaremos é a <em><code>@charset</code></em>, e para a importação de fonts usamos a <em><code>@import</code></em>.</p>
+        </article>
+        
+        <nav>
+            <a href="explicacao2.html" target="_self" rel="prev">Voltar</a>
+            <a href="explicacao4.html" target="_self" rel="next">Avançar</a>
+        </nav>
+    </main>
+    
+    <footer>
+        <p>Página desenvolvida com base na explicação do Professor <a href="https://allmylinks.com/cursoemvideo?fbclid=PAZXh0bgNhZW0CMTEAAadKLJNzXeXMQZ3cbmEcLyGMJC9fxHwrgFCOoAqdeLv4nvTnA5ornc9vhy6zOA_aem_Wo807gRaUsUoDLHrOFe_3w" target="_blank" rel="external">Gustavo Guanabara</a> no Curso de HTML 5 CSS 3 do <a href="https://www.cursoemvideo.com/login/"  target="_blank" rel="external">CursoemVideo</a></p>
+    </footer> 
+</body>
+</html>
